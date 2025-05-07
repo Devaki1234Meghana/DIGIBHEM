@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotel Booking</title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Hotel Booking</h2>
+    
+    <p class="subtitle">
+      Your comfort is our priority — book your stay with confidence
+    </p>
+
+    <div id="customerForm">
+      <div class="section">
+        <label for="name">Name *</label>
+        <input type="text" id="name" required>
+
+        <label for="checkin">Check-in Date *</label>
+        <input type="date" id="checkin" required>
+
+        <label for="days">Total Days *</label>
+        <input type="number" id="days" min="1" required>
+
+        <label for="persons">Total Persons*<br>Note: Upto 2 persons - No charge in cost<br>Otherwise Per Day Cost for Extra person: ₹1000/-</label>
+        <input type="number" id="persons" min="1" required>
+      </div>
+
+      <button class="btn" onclick="storeCustomerInfo()">Next</button>
+      <div id="error-message" class="error-message">Please fill in all required fields.</div>
+    </div>
+
+    <div id="roomForm" class="hidden">
+      <div class="section">
+        <label for="roomType">Room Type</label>
+        <select id="roomType" onchange="updateRoomImage()">
+          <option value="delux">Delux Rooms(Rs.2000/-)</option>
+          <option value="suite">Suite Rooms(Rs.3000/-)</option>
+        </select>
+
+        <img id="roomImage" class="room-image" src="https://www.hotelkalki.com/assets/img/rooms/a-deluxe-2.jpg" alt="Delux Room">
+        <label>Amenities</label>
+        <div class="checkboxes">
+          <label><input type="checkbox" id="ac"> AC (₹1000)</label>
+          <label><input type="checkbox" id="locker"> Locker (₹300)</label>
+        </div>
+      </div>
+
+      <button class="btn" onclick="calculateRoomCost()">Next</button>
+    </div>
+
+    <div id="paymentForm" class="hidden">
+      <div class="section">
+        <h3 class="section-title">Payment Summary</h3>
+        
+        <label>Total Cost:</label>
+        <p id="totalCost"></p>
+
+        <label for="advance">Advance Amount *</label>
+        <input type="number" id="advance" min="0" required>
+
+        <button class="btn" onclick="calculateBalance()">Check Balance Amount</button>
+
+        <label>Balance:</label>
+        <p id="balance"></p>
+      </div>
+
+      <label>
+        <input type="checkbox" id="termsConditions"> 
+        I agree to the terms and conditions:
+        <ul>
+          <li>The customer must be careful with the furniture and other amenities in the room.</li>
+          <li>The room should be kept neat and clean during the stay.</li>
+        </ul>
+      </label>
+
+      <button class="btn" onclick="confirmBooking()">Confirm Booking</button>
+    </div>
+  </div>
+
+  <script src="booking.js"></script>
+</body>
+</html>

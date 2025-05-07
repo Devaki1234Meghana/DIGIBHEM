@@ -1,0 +1,111 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 40px;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF7t716AKtYGck2CqVExiAh_xA6spM184s8w&s') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.subtitle {
+  text-align: center;
+  color: #f5a142;
+  font-style: italic;
+}
+
+.section {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ecf0f1;
+}
+
+label {
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.btn {
+  width: 100%;
+  background-color: #27ae60;
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2ecc71;
+}
+
+.hidden {
+  display: none;
+}
+
+.checkboxes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: normal;
+  color: #34495e;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}
+
+.room-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.section-title {
+  color: black;
+}
+
+#totalCost, #balance {
+  color: black;
+}
